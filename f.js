@@ -1,4 +1,4 @@
-let username = document.getElementById("Firstname");
+let Firstname = document.getElementById("Firstname");
 let num = document.getElementById("num");
 let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
@@ -16,7 +16,7 @@ let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?
 // username validation
 
 function nameValidation() {
-    if (regexpname.test(Firstname.value)){
+    if (regexpname.test(Firstname.value==""))&&(regexpname.test(Firstname.value==" 0-9")){
         error1.innerHTML="valid firstname";
         error1.style.color="green";
         return numValidation();
@@ -53,7 +53,7 @@ if(regexpemail.test(mail.value))
 {
     error3.innerHTML = "valid mail-id";
     error3.style.color = "green";
-    return passValidation();
+    return true;
 }
 
 else {
