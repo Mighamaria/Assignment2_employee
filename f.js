@@ -34,9 +34,6 @@ function nameValidation() {
 // phone number validation
 function numValidation() {
 if((regexpnum1.test(num.value)|| regexpnum2.test(num.value) ||  regexpnum3.test(num.value) || regexpnum4.test(num.value) ) {
-    error2.innerHTML= "Input not valid";
-  } 
-  {
     error2.innerHTML = "valid phone number";
     error2.style.color = "green";
     return mailValidation() ;
