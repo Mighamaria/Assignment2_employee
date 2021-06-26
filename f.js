@@ -4,7 +4,7 @@ let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-let regexpname= /^([A-Za-z\._]+)$/;
+let regexpname= /^([A-Za-z]+)$/;
 //number
 let regexpnum1= /^([0-9]{10})$/;
 let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
@@ -16,14 +16,14 @@ let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?
 // username validation
 
 function nameValidation() {
-    if (regexpname.test(Firstname.value==""))&&(regexpname.test(Firstname.value==" 0-9")){
+    if (regexpname.test(Firstname.value)){
         error1.innerHTML="valid firstname";
         error1.style.color="green";
         return numValidation();
     }
 
     else {
-        error1.innerHTML="firstname can have include A-Z , a-z , 0-9 , _ , and . only ";
+        error1.innerHTML="firstname can have include A-Z , a-z  ";
         error1.style.color="red";
         return false;
     }
