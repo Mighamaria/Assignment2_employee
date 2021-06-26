@@ -19,13 +19,11 @@ let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?
 function nameValidation() {
     if (regexpname.test(name.value)){
         error1.innerHTML="valid firstname";
-        error1.style.color="green";
         return numValidation();
     }
 
     else {
         error1.innerHTML="firstname can have include A-Z , a-z only";
-        error1.style.color="red";
         return false;
     }
 }
@@ -35,13 +33,11 @@ function nameValidation() {
 function numValidation() {
 if((regexpnum1.test(num.value)|| regexpnum2.test(num.value) ||  regexpnum3.test(num.value) || regexpnum4.test(num.value) ) {
     error2.innerHTML = "valid phone number";
-    error2.style.color = "green";
     return mailValidation() ;
     }
 
 else {
     error2.innerHTML = "Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX";
-    error2.style.color = "red";
     return false;
 
 }    
@@ -53,13 +49,11 @@ function mailValidation()   {
 if(regexpemail.test(mail.value))
 {
     error3.innerHTML = "valid mail-id";
-    error3.style.color = "green";
     return true;
 }
 
 else {
     error3.innerHTML = "invalid mail-id";
-    error3.style.color = "red";
     return false;
 }
 }
