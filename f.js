@@ -7,6 +7,9 @@ let error3 = document.getElementById("error3");
 let regexpname=  /^([A-Za-z]+)$/;
 //number
 let regexpnum1= /^([0-9]{10})$/;
+let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
+let regexpnum3= /^([0-9]{3}).([0-9]{3}).([0-9]{4})$/;
+let regexpnum4= /^([0-9]{3})-([0-9]{3})-([0-9]{4})$/;
 
 // mail
 let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
@@ -21,7 +24,7 @@ function nameValidation() {
     }
 
     else {
-        error1.innerHTML="firstname can have include A-Z , a-z ,0-9 and _ only";
+        error1.innerHTML="firstname can have include A-Z , a-z only";
         error1.style.color="red";
         return false;
     }
@@ -30,7 +33,7 @@ function nameValidation() {
 
 // phone number validation
 function numValidation() {
-if((regexpnum1.test(num.value)) {
+if((regexpnum1.test(num.value)|| regexpnum2.test(num.value) ||  regexpnum3.test(num.value) || regexpnum4.test(num.value) ) {
     error2.innerHTML= "Input not valid";
   } 
   {
@@ -40,7 +43,7 @@ if((regexpnum1.test(num.value)) {
     }
 
 else {
-    error2.innerHTML = "Accepted formats are: XXXXXXXXXX";
+    error2.innerHTML = "Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX";
     error2.style.color = "red";
     return false;
 
