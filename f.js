@@ -4,7 +4,7 @@ let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-let regexpname= /^([A-Za-z]+)$/;
+let regexpname=  /^([A-Za-z0-9\._]+)$/;
 //number
 let regexpnum1= /^([0-9]{10})$/;
 let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
@@ -23,7 +23,7 @@ function nameValidation() {
     }
 
     else {
-        error1.innerHTML="firstname can have include A-Z , a-z  ";
+        error1.innerHTML="firstname can have include A-Z , a-z ,0-9 and _ only";
         error1.style.color="red";
         return false;
     }
@@ -32,8 +32,8 @@ function nameValidation() {
 
 // phone number validation
 function numValidation() {
-if(if (isNaN(num) || num < 1 || num > 10) {
-    text = "Input not valid";
+if((regexpnum1.test(num.value) || regexpnum2.test(num.value) ||  regexpnum3.test(num.value) || regexpnum4.test(num.value)) {
+    error2.innerHTML= "Input not valid";
   } 
   {
     error2.innerHTML = "valid phone number";
