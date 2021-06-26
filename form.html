@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+		<title>sjc </title>
+		<meta charset="utf-8" />
+		<script src="JS/f.js">
+		</script>
+	</head>
+	
+	<body>
+	
+		<h1>
+			<center>Employee Registration</center>
+		</h1>
+		<table align="center" cellpadding="0.5" cellspacing="0.5" width="35%" height="25%">
+			<form name="f1" method="GET" action="#" onsubmit="return true">
+				<form class="f2" action="./login.html" onsubmit="return nameValidation();">
+				<tr>
+					<td><label>Id</label></td>
+					<td><input type="text" name="Id" maxlength="4" required></td>
+				</tr>
+				<tr>
+					<td><label>Email</label></td>
+					<td><input type="email" class="form-control" id="mail" aria-describedby="emailHelp" placeholder="mail@abc.com" required>
+						<label id="error1"></label></td>
+				</tr>
+				<tr>
+					<td><label> Firstname </label> </td>
+					<td><input type="text" class="form-control" id="Firstname" placeholder="name_character only"  required>
+						<label id="error2" ></label></td>
+				</tr>
+				<tr>
+					<td><label> Middlename </label> </td>
+					<td><input type="text" name="Middlename" required></td>
+				</tr>
+				<tr>
+					<td><label> Lastname </label></td>
+					<td><input type="text" name="Lastname" required></td>
+				</tr>
+				<tr>
+					<td><label>Address </label></td>
+					<td><textarea cols="25" rows="5" value="address" required></textarea> </td>
+				</tr>
+				<tr>
+					<td><label> Gender </label></td>
+					<td><input type="radio" name="gender" value="male" required> Male
+						<input type="radio" name="gender" value="female" required> Female
+						<input type="radio" name="gender" value="other" required> Other
+					</td>
+				</tr>
+				<tr>
+					<td><label>Date Of Birth</label></td>
+					<td><input type="date" required></td>
+				</tr>
+				<td><label>Date Of Joining </label></td>
+				<td><input type="date" required></td>
+				</tr>
+	
+				<tr>
+					<td><label>Phone</label></td>
+					<td>
+						<input type="number" class="form-control" id="num" placeholder="XXXXXXXXXX " maxlength="10" required>
+						<label id="error3"></label</td>
+					
+				</tr>
+				<tr>
+					<td><button type="reset">Reset</button></td>
+					<td><button type="submit">Submit</button></td>
+				</tr>
+	
+			</form>
+		</table>
+	</body>
+	
+	</html>
