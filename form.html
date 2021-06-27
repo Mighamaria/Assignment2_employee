@@ -17,11 +17,11 @@
 				<form name="f2" method="GET" action="#" onsubmit="return nameValidation();">
 				<tr>
 					<td><label>Id</label></td>
-					<td><input type="text" name="Id" maxlength="4" placeholder="ID" onsubmit="return nameValidation" required></td>
+					<td><input type="text" name="Id" maxlength="4" placeholder="ID" onsubmit=" nameValidation" required></td>
 				</tr>
 				<tr>
 					<td><label>Email</label></td>
-					<td><input type="email"  id="mail" aria-describedby="emailHelp" placeholder="mail@abc.com" onsubmit="return mailValidation" required>
+					<td><input type="email"  id="mail" aria-describedby="emailHelp" placeholder="mail@abc.com" onsubmit=" mailValidation" required>
 						<label id="error1"></label></td>
 				</tr>
 				<tr>
@@ -59,7 +59,7 @@
 				<tr>
 					<td><label>Phone</label></td>
 					<td>
-						<input type="number"   id="number" placeholder="Contact number" maxlength="10" onsubmit="return numValidation"  required>
+						<input type="number"   id="number" placeholder="Contact number" maxlength="10" onsubmit="numValidation"  required>
 						<label id="error3"></label</td>
 					
 				</tr>
