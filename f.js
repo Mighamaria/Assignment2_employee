@@ -6,7 +6,7 @@ let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
 var nameValidation=function()
     {
-      let regexpname= /^([A-Za-z\._]+)$/;
+      let regexpname= /^([A-Za-z]+)$/;
 
       if(regexpname.test(username.value) )
       {
