@@ -28,7 +28,7 @@ function nameValidation() {
 
 // phone number validation
 function numValidation() {
-if((regexpnum1.test(num.value) ) {
+if((regexpnum1.test(num.value)) ) {
     error2.innerHTML = "valid phone number";
     return mailValidation() ;
     }
