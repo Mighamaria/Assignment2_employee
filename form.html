@@ -30,11 +30,13 @@
 				</tr>
 				<tr>
 					<td><label> Middlename </label> </td>
-					<td><input type="text" name="Middlename" id="middlename"  placeholder="Middlename"  required></td>
+					<td><input type="text" name="Middlename" id="middlename"  placeholder="Middlename"  required>
+                        <label id="error2" ></label></td>
 				</tr>
 				<tr>
 					<td><label> Lastname </label></td>
-					<td><input type="text" name="Lastname" id="lastname"  placeholder="Lasttname" required></td>
+					<td><input type="text" name="Lastname" id="lastname"  placeholder="Lasttname" required>
+                        <label id="error2" ></label></td>
 				</tr>
 				<tr>
 					<td><label>Address </label></td>
@@ -90,15 +92,15 @@ function nameValidation()
 
       if(regexpname.test(username.value) )
       {
-        error1.innerHTML="Valid username.";
-        error1.style.color="green";
+        error2.innerHTML="Valid username.";
+        error2.style.color="green";
         return numValidation();
         
       }
      else{
     
-        error1.innerHTML="Username can include A-Z , a-z  only.";
-        error1.style.color="red";
+        error2.innerHTML="Username can include A-Z , a-z  only.";
+        error2.style.color="red";
         return false;
     
          } 
@@ -109,15 +111,15 @@ function nameValidation()
     
       if(regexpnum1.test(number.value) )
       {
-        error2.innerHTML="Valid contact number.";
-        error2.style.color="green";
+        error3.innerHTML="Valid contact number.";
+        error3.style.color="green";
         return mailValidation();
        
       }
      else{
     
-        error2.innerHTML="Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX.";
-        error2.style.color="red";
+        error3.innerHTML="Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX.";
+        error3.style.color="red";
         return false;
     
          } 
@@ -128,12 +130,12 @@ function nameValidation()
   
 if(regexpemail.test(mail.value))
 {
-    error3.innerHTML = "valid mail-id";
+    error1.innerHTML = "valid mail-id";
     return true;
 }
 
 else {
-    error3.innerHTML = "invalid mail-id";
+    error1.innerHTML = "invalid mail-id";
     return false;
 }
 }
