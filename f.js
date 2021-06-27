@@ -4,13 +4,14 @@ let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-let regexpname= /^([A-Za-z]+)$/;
-let regexpnum1= /^([0-9]{10})$/;
+
+
 let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 
-function nameValidation()
+var nameValidation=function()
     {
-      
+      let regexpname= /^([A-Za-z]+)$/;
+
       if(regexpname.test(username.value) )
       {
         error1.innerHTML="Valid username.";
@@ -27,15 +28,15 @@ function nameValidation()
          } 
       
     }
-function numValidation()
+ var numValidation=function()
     {
-      
+      let regexpnum1= /^([0-9]{10})$/;
       if(regexpnum1.test(number.value) )
       {
         error2.innerHTML="Valid contact number.";
         error2.style.color="green";
         return mailValidation();
-        
+       
       }
      else{
     
@@ -47,7 +48,8 @@ function numValidation()
       
     }
 
-function mailValidation()   {
+ var mailValidation=function()   {
+    let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 if(regexpemail.test(mail.value))
 {
     error3.innerHTML = "valid mail-id";
