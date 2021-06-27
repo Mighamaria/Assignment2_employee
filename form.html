@@ -14,7 +14,7 @@
 		</h1>
 		<table align="center" cellpadding="0.5" cellspacing="0.5" width="35%" height="25%">
 			
-				<form name="f2" method="GET" action="#" onkeyup=" ">
+				<form name="f2" method="GET" action="#" onsubmit="return nameValidation();">
 				<tr>
 					<td><label>Id</label></td>
 					<td><input type="text" name="Id" maxlength="4" placeholder="ID"  required></td>
@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 					<td><label> Firstname </label> </td>
-					<td><input type="text"  id="username" placeholder="Firstname"onkeyup=" nameValidation"  required>
+					<td><input type="text"  id="username" placeholder="Firstname" required>
 						<label id="error2" ></label></td>
 				</tr>
 				<tr>
@@ -59,7 +59,7 @@
 				<tr>
 					<td><label>Phone</label></td>
 					<td>
-						<input type="tel"   id="number" placeholder="Contact number" maxlength="10"  onkeyup="numValidation"  required>
+						<input type="tel"   id="number" placeholder="Contact number" maxlength="10"   required>
 						<label id="error3"></label</td>
 					
 				</tr>
