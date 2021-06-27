@@ -1,12 +1,17 @@
-let username=document.getElementById("username");
+let username=document.getElementById("firstname");
+let username=document.getElementById("middlename");
+let username=document.getElementById("lastname");
 let number=document.getElementById("number");
 let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-var nameValidation=function()
+let regexpname= /^([A-Za-z]+)$/;
+let regexpnum1= /^([0-9]{10})$/;
+let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+function nameValidationf()
     {
-      let regexpname= /^([A-Za-z]+)$/;
+     
 
       if(regexpname.test(username.value) )
       {
@@ -24,9 +29,9 @@ var nameValidation=function()
          } 
       
     }
- var numValidation=function()
+ function  numValidation()
     {
-      let regexpnum1= /^([0-9]{10})$/;
+    
       if(regexpnum1.test(number.value) )
       {
         error2.innerHTML="Valid contact number.";
@@ -44,8 +49,8 @@ var nameValidation=function()
       
     }
 
- var mailValidation=function()   {
-    let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+ function mailValidation()   {
+  
 if(regexpemail.test(mail.value))
 {
     error3.innerHTML = "valid mail-id";
