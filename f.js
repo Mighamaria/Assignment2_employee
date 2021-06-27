@@ -14,7 +14,7 @@ let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?
 // username validation
 
 function nameValidation() {
-    if (regexpname.test(username.value)){
+    if (regexpname.test(name.value)){
         error1.innerHTML="valid firstname";
         return numValidation();
     }
