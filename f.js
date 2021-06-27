@@ -4,7 +4,7 @@ let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-let regexpname=  /^[a-zA-Z]*$/;
+let regexpname= /^[A-Za-z]+$/;
 //number
 let regexpnum1= /^([0-9]{10})$/;
 let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
