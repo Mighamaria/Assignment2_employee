@@ -1,46 +1,51 @@
-let name = document.getElementById("Firstname");
-let num = document.getElementById("num");
+let username=document.getElementById("username");
+let number=document.getElementById("number");
 let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-let regexpname= /^[A-Za-z]+$/;
-//number
-let regexpnum1= /^[0-9]{10}$/;
-
-// mail
+let regexpname= /^([A-Za-z]+)$/;
+let regexpnum1= /^([0-9]{10})$/;
 let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
 
-// username validation
-
-function nameValidation() {
-    if (regexpname.test(name.value)){
-        error1.innerHTML="valid firstname";
+function usernameValidation()
+    {
+      
+      if(regexpname.test(username.value) )
+      {
+        error1.innerHTML="Valid username.";
+        error1.style.color="green";
         return numValidation();
-    }
-
-    else {
-        error1.innerHTML="firstname can have include A-Z , a-z only";
+        
+      }
+     else{
+    
+        error1.innerHTML="Username can include A-Z , a-z  only.";
+        error1.style.color="red";
         return false;
+    
+         } 
+      
     }
-}
-
-
-// phone number validation
-function numValidation() {
-if(regexpnum1.test(num.value) ) {
-    error2.innerHTML = "valid phone number";
-    return mailValidation() ;
+function numValidation()
+    {
+      
+      if(regexpnum1.test(number.value) )
+      {
+        error2.innerHTML="Valid contact number.";
+        error2.style.color="green";
+        return mailValidation();
+        
+      }
+     else{
+    
+        error2.innerHTML="Accepted formats are: XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX.";
+        error2.style.color="red";
+        return false;
+    
+         } 
+      
     }
-
-else {
-    error2.innerHTML = "Accepted formats are: XXXXXXXXXX";
-    return false;
-
-}    
-}
-
-// mail validation
 
 function mailValidation()   {
 if(regexpemail.test(mail.value))
