@@ -4,10 +4,6 @@ let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
 let error2 = document.getElementById("error2");
 let error3 = document.getElementById("error3");
-
-
-let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-
 var nameValidation=function()
     {
       let regexpname= /^([A-Za-z]+)$/;
