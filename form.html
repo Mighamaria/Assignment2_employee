@@ -72,9 +72,9 @@
 			</form>
 		</table>
 		<script>
-let username=document.getElementById("firstname");
-let username=document.getElementById("middlename");
-let username=document.getElementById("lastname");
+let username1=document.getElementById("firstname");
+let username2=document.getElementById("middlename");
+let username3=document.getElementById("lastname");
 let number=document.getElementById("number");
 let mail = document.getElementById("mail");
 let error1 = document.getElementById("error1");
@@ -87,7 +87,47 @@ function nameValidation()
     {
      
 
-      if(regexpname.test(username.value) )
+      if(regexpname.test(username1.value) )
+      {
+        error2.innerHTML="Valid username.";
+        error2.style.color="green";
+        return numValidation();
+        
+      }
+     else{
+    
+        error2.innerHTML="Username can include A-Z , a-z  only.";
+        error2.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+			function nameValidation()
+    {
+     
+
+      if(regexpname.test(username2.value) )
+      {
+        error2.innerHTML="Valid username.";
+        error2.style.color="green";
+        return numValidation();
+        
+      }
+     else{
+    
+        error2.innerHTML="Username can include A-Z , a-z  only.";
+        error2.style.color="red";
+        return false;
+    
+         } 
+      
+    }
+			function nameValidation()
+    {
+     
+
+      if(regexpname.test(username3.value) )
       {
         error2.innerHTML="Valid username.";
         error2.style.color="green";
